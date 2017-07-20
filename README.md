@@ -46,7 +46,7 @@ Different from OpenAI's [paper](https://arxiv.org/abs/1706.01905), DM's paper us
 
 ![](figures/double-dunk-sigma.png)
 
-## Usage
+## Set up
 
 First, copy the modified files to openai baselines (to support NoisyNet)
 ```bash
@@ -61,12 +61,29 @@ And add this line to your .bashrc (append to the PYTHONPATH)
 export PYTHONPATH="PATH-TO-NoisyNet-DQN/baselines:$PYTHONPATH"
 ```
 
+# Usage
+
 Train the agent and be patient
 ```bash
 # with NoisyNet-DQN
 python train.py --env Breakout --no-double-q --noisy --save-dir MODEL_PATH
 # with vanilla DQN
 python train.py --env Breakout --no-double-q --save-dir MODEL_PATH
+
+# with NoisyNet-DoubleDQN(same as openai/baselines)
+python train.py --env Breakout --noisy --save-dir MODEL_PATH
+# with vanilla DoubleDQN
+python train.py --env Breakout --save-dir MODEL_PATH
+
+# with NoisyNet-Dueling-DQN(same as openai/baselines)
+python train.py --env Breakout --dueling --noisy --save-dir MODEL_PATH
+# with vanilla Dueling DQN(same as openai/baselines)
+python train.py --env Breakout --dueling --save-dir MODEL_PATH
+```
+
+You can navigate to tensorboard to see what's going on
+```bash
+tensorboard --logdir MODEL_PATH --port PORT
 ```
 
 ## Basic requirement
