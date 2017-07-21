@@ -42,9 +42,9 @@ The corresponding event files can be found at [drive](https://drive.google.com/d
 
 ## The decreasing \sigma?
 
-Different from OpenAI's [paper](https://arxiv.org/abs/1706.01905), DM's paper uses learnable parameter to determine the scale of the noise. So, you might curious about the scale of the \sigma. Here, I train NoisyNet-DQN on ```DoubleDunk-NoFrameskip-v4``` and record the mean of the \sigma:
+Different from OpenAI's [paper](https://arxiv.org/abs/1706.01905), DM's paper uses learnable parameter to determine the scale of the noise. So, you might curious about the scale of the \sigma. Here, I train NoisyNet-DQN on ```Atlantis-NoFrameskip-v4``` and record the mean of the absolute \sigma:
 
-![](figures/double-dunk-sigma.png)
+![](figures/atlantis-sigma.png)
 
 ## Set up
 
